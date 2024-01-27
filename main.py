@@ -42,7 +42,7 @@ class FinancialCrew:
     return result
 
 def main():
-  st.title("Financial Analysis Crew")
+  st.title("Stocky 2.0 - Financial Analysis")
   st.write('-------------------------------')
   company = st.text_input("What is the company you want to analyze?")
 
