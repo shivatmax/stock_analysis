@@ -52,10 +52,8 @@ def main():
       financial_crew = FinancialCrew(company)
       result = financial_crew.run()
       time.sleep(3)  # Simulating analysis time
-      st.success("Analysis complete!")
-      st.write("\n\n########################")
-      st.write("## Here is the Report")
-      st.write("########################\n")
+      st.success(f" {company} Analysis complete!")
+      st.write("\n\n----------------------------------------------------\n\n")
       st.write(result)
       st.balloons()
 
