@@ -4,6 +4,7 @@ from textwrap import dedent
 from stock_analysis_agents import StockAnalysisAgents
 from stock_analysis_tasks import StockAnalysisTasks
 from dotenv import load_dotenv
+import time
 load_dotenv()
 
 class FinancialCrew:
@@ -47,13 +48,16 @@ def main():
   company = st.text_input("What is the company you want to analyze?")
 
   if st.button("Run Analysis"):
-    financial_crew = FinancialCrew(company)
-    result = financial_crew.run()
-    st.write("\n\n########################")
-    st.write("## Here is the Report")
-    st.write("########################\n")
-    st.write(result)
-    st.balloons()
+    with st.spinner("Running analysis..."):
+      financial_crew = FinancialCrew(company)
+      result = financial_crew.run()
+      time.sleep(3)  # Simulating analysis time
+      st.success("Analysis complete!")
+      st.write("\n\n########################")
+      st.write("## Here is the Report")
+      st.write("########################\n")
+      st.write(result)
+      st.balloons()
 
 if __name__ == "__main__":
   main()
