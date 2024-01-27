@@ -51,7 +51,7 @@ def main():
     with st.spinner("Running analysis..."):
       financial_crew = FinancialCrew(company)
       result = financial_crew.run()
-      time.sleep(3)  # Simulating analysis time
+      time.sleep(3) 
       st.success(f" {company} Analysis complete!")
       st.write("\n\n----------------------------------------------------\n\n")
       st.write(result)
